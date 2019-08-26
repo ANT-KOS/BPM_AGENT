@@ -1,8 +1,5 @@
 
 import com.sun.net.httpserver.HttpExchange;
-import java.awt.Dimension;
-import java.awt.HeadlessException;
-import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.awt.event.WindowEvent;
 import java.io.BufferedInputStream;
@@ -16,7 +13,6 @@ import java.security.GeneralSecurityException;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpHost;
