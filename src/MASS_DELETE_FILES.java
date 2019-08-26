@@ -9,7 +9,6 @@ import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JOptionPane;
 import org.apache.commons.io.FileUtils;
 
 public class MASS_DELETE_FILES {
@@ -59,7 +58,6 @@ public class MASS_DELETE_FILES {
                     } catch (FileSystemException ex) {
                         Logger.getLogger(HTTP_HANDLERS.class.getName()).log(Level.SEVERE, null, ex);
                         HTTP_HANDLERS.continuation=true;
-                        continue;
                     }
                 }
             }
