@@ -70,27 +70,22 @@ public final class FILE_OPERATIONS {
     public static int get_DAYS_BEF_DEL() throws IOException {
         int d;
         Wini ini = new Wini(file_out_config);
-
         d = ini.get("BASIC_CONFIG", "MILLISECONDS_FOR_DELETION", int.class);
         return d;
-
     }
 
     public static String get_LIB_OFFICE_WIN_x64() throws IOException {
         Wini ini = new Wini(file_out_config);
-
         return ini.get("LIBREOFFICE CONFIG", "WIN X64 DIR", String.class);
     }
 
     public static String get_LIB_OFFICE_WIN_x32() throws IOException {
         Wini ini = new Wini(file_out_config);
-
         return ini.get("LIBREOFFICE CONFIG", "WIN X32 DIR", String.class);
     }
 
     public static String get_LIB_OFFICE_LINUX() throws IOException {
         Wini ini = new Wini(file_out_config);
-
         return ini.get("LIBREOFFICE CONFIG", "LINUX DIR", String.class);
     }
 
@@ -196,10 +191,10 @@ public final class FILE_OPERATIONS {
     public static String create_PKCS11_config(String conf) throws IOException
     {
         String path = "config/pkcs11.txt";
-        BufferedWriter WRITER = new BufferedWriter(new FileWriter(path));
-        WRITER.write(conf);
-        WRITER.flush();
-        WRITER.close();
+        try (BufferedWriter WRITER = new BufferedWriter(new FileWriter(path))) {
+            WRITER.write(conf);
+            WRITER.flush();
+        }
         return path;
     }
 }
