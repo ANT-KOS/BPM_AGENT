@@ -54,7 +54,7 @@ public class Main {
             current.setPkgrel(BPM_AGENT_VERSION_R);
             //VERSION OF PROGRAM - END
             
-            String updateRepositoryUrl = "http://83.212.93.239/bpm_agent_update/";
+            String updateRepositoryUrl = "https://bpm.gc.teiemt.gr/bpm_agent_update/";
             ReleaseXMLParser parser = new ReleaseXMLParser();
             Release update = parser.parse(updateRepositoryUrl + "latest.xml", Modes.URL);
             if (update.compareTo(current) > 0) {
@@ -193,7 +193,7 @@ public class Main {
                     current.setPkgrel(BPM_AGENT_VERSION_R);
                     //VERSION OF PROGRAM - END
 
-                    String updateRepositoryUrl = "http://83.212.93.239/bpm_agent_update/";
+                    String updateRepositoryUrl = "https://bpm.gc.teiemt.gr/bpm_agent_update/";
                     ReleaseXMLParser parser = new ReleaseXMLParser();
                     Release update = parser.parse(updateRepositoryUrl + "latest.xml", Modes.URL);
                     if (update.compareTo(current) > 0) {
@@ -266,7 +266,7 @@ public class Main {
             public void actionPerformed(ActionEvent e) {
                 try {
 
-                    String updateRepositoryUrl = "http://83.212.93.239/bpm_agent_update/";
+                    String updateRepositoryUrl = "https://bpm.gc.teiemt.gr/bpm_agent_update/";
                     Updater updater = new Updater();
                     Downloader downloader = new Downloader();
                     String temporaryDirectoryForUpdates = "tmp";
@@ -302,7 +302,7 @@ public class Main {
             public void actionPerformed(ActionEvent e) {
                 try {
 
-                    String updateRepositoryUrl = "http://83.212.93.239/bpm_agent_update/";
+                    String updateRepositoryUrl = "https://bpm.gc.teiemt.gr/bpm_agent_update/";
                     Updater updater = new Updater();
                     Downloader downloader = new Downloader();
                     String temporaryDirectoryForUpdates = "tmp";
