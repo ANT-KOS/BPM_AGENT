@@ -38,10 +38,10 @@ public class Main {
 
     protected static int port;
     protected static String BPM_AGENT_VERSION = "4.4";
-    protected static String BPM_AGENT_VERSION_R = "7";
-    protected static String NAPS_LATEST = "5.8.2";
+    protected static String BPM_AGENT_VERSION_R = "8";
+    protected static String NAPS_LATEST = "6.1.2";
     protected static boolean INSTALL_NAPS = true;
-    protected static String DATE_OF_CREATION = "18/03/2019";
+    protected static String DATE_OF_CREATION = "30/08/2019";
     private static final int BUFFER_SIZE = 4096;
     private static MASS_DELETE_FILES MDF = new MASS_DELETE_FILES();
     protected static DUMMYJFRAME DJF;
@@ -54,7 +54,7 @@ public class Main {
             current.setPkgrel(BPM_AGENT_VERSION_R);
             //VERSION OF PROGRAM - END
             
-            String updateRepositoryUrl = "http://83.212.93.83/bpm_agent_update/";
+            String updateRepositoryUrl = "http://83.212.93.239/bpm_agent_update/";
             ReleaseXMLParser parser = new ReleaseXMLParser();
             Release update = parser.parse(updateRepositoryUrl + "latest.xml", Modes.URL);
             if (update.compareTo(current) > 0) {
@@ -193,7 +193,7 @@ public class Main {
                     current.setPkgrel(BPM_AGENT_VERSION_R);
                     //VERSION OF PROGRAM - END
 
-                    String updateRepositoryUrl = "http://83.212.93.83/bpm_agent_update/";
+                    String updateRepositoryUrl = "http://83.212.93.239/bpm_agent_update/";
                     ReleaseXMLParser parser = new ReleaseXMLParser();
                     Release update = parser.parse(updateRepositoryUrl + "latest.xml", Modes.URL);
                     if (update.compareTo(current) > 0) {
@@ -266,7 +266,7 @@ public class Main {
             public void actionPerformed(ActionEvent e) {
                 try {
 
-                    String updateRepositoryUrl = "http://83.212.93.83/bpm_agent_update/";
+                    String updateRepositoryUrl = "http://83.212.93.239/bpm_agent_update/";
                     Updater updater = new Updater();
                     Downloader downloader = new Downloader();
                     String temporaryDirectoryForUpdates = "tmp";
@@ -302,7 +302,7 @@ public class Main {
             public void actionPerformed(ActionEvent e) {
                 try {
 
-                    String updateRepositoryUrl = "http://83.212.93.83/bpm_agent_update/";
+                    String updateRepositoryUrl = "http://83.212.93.239/bpm_agent_update/";
                     Updater updater = new Updater();
                     Downloader downloader = new Downloader();
                     String temporaryDirectoryForUpdates = "tmp";
