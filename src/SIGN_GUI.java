@@ -327,16 +327,50 @@ public class SIGN_GUI extends javax.swing.JFrame {
                     try {
                         File FILE_TO_SEND = new File(FILE_COPY_PATH);
                         System.out.println("\n" + parameters.get("restpostfile").toString());
-
+                        
+                        
+                        //PROCESSMAKER EXTRAREST PLUGIN
+                        MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+                        builder.setCharset(Charset.forName("UTF-8"));
+                        builder.setContentType(ContentType.MULTIPART_FORM_DATA);
+                        builder.setBoundary("----Content Boundary----");
+                        builder.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);
+                         if (parameters.get("app_doc_comment") != null) {
+                            if (!parameters.get("app_doc_comment").toString().equals("")) {
+                                builder.setBoundary("----Content Boundary----");
+                                builder.addTextBody("app_doc_comment", "TEST"/*parameters.get("app_doc_comment").toString()*/, ContentType.TEXT_PLAIN);
+                                System.out.println("app_doc_comment: " + parameters.get("app_doc_comment").toString());
+                            }
+                        }
+                        builder.setBoundary("----Content Boundary----");
+                        builder.addTextBody("inp_doc_uid", parameters.get("inp_doc_uid").toString(), ContentType.TEXT_PLAIN);
+                        System.out.println("inp_doc_uid: " + parameters.get("inp_doc_uid").toString());
+                        builder.setBoundary("----Content Boundary----");
+                        builder.addTextBody("app_doc_uid", parameters.get("app_doc_uid").toString(), ContentType.TEXT_PLAIN);
+                        System.out.println("app_doc_uid: " + parameters.get("app_doc_uid").toString());
+                        builder.setBoundary("----Content Boundary----");
+                        builder.addTextBody("doc_version", parameters.get("v").toString(), ContentType.TEXT_PLAIN);
+                        System.out.println("doc_version: " + parameters.get("v").toString());
+                        builder.setBoundary("----Content Boundary----");
+                        builder.addTextBody("doc_type", "INPUT", ContentType.TEXT_PLAIN);
+                        builder.setBoundary("----Content Boundary----");
+                        builder.addBinaryBody("file", FILE_TO_SEND, ContentType.create("application/pdf"), FILE_TO_SEND.getName());
+                        builder.setBoundary("----Content Boundary----");
+                        
+                        
+                        
+                        
+                        //PROCESSMAKER POST INPUT-DOCUMENT
+                        /*
                         MultipartEntityBuilder builder = MultipartEntityBuilder.create();
                         builder.setCharset(Charset.forName("UTF-8"));
                         builder.setContentType(ContentType.MULTIPART_FORM_DATA);
                         builder.setBoundary("----Content Boundary----");
                         builder.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);
 
-                        builder.addTextBody("app_uid", parameters.get("app_uid").toString(), ContentType.TEXT_PLAIN);
-                        System.out.println("app_uid: " + parameters.get("app_uid").toString());
-                        builder.setBoundary("----Content Boundary----");
+                        //builder.addTextBody("app_uid", parameters.get("app_uid").toString(), ContentType.TEXT_PLAIN);
+                        //System.out.println("app_uid: " + parameters.get("app_uid").toString());
+                        //builder.setBoundary("----Content Boundary----");
                         builder.addTextBody("app_doc_uid", parameters.get("app_doc_uid").toString(), ContentType.TEXT_PLAIN);
                         System.out.println("app_doc_uid: " + parameters.get("app_doc_uid").toString());
                         builder.setBoundary("----Content Boundary----");
@@ -351,14 +385,15 @@ public class SIGN_GUI extends javax.swing.JFrame {
                         }
                         
                         builder.setBoundary("----Content Boundary----");
-                        builder.addTextBody("userUid", parameters.get("userUid").toString(), ContentType.TEXT_PLAIN);
-                        System.out.println("userUid: " + parameters.get("userUid").toString());
-                        builder.setBoundary("----Content Boundary----");
+                        //builder.addTextBody("userUid", parameters.get("userUid").toString(), ContentType.TEXT_PLAIN);
+                        //System.out.println("userUid: " + parameters.get("userUid").toString());
+                        //builder.setBoundary("----Content Boundary----");
                         builder.addTextBody("inp_doc_uid", parameters.get("inp_doc_uid").toString(), ContentType.TEXT_PLAIN);
                         System.out.println("inp_doc_uid: " + parameters.get("inp_doc_uid").toString());
                         builder.setBoundary("----Content Boundary----");
                         builder.addBinaryBody("form", FILE_TO_SEND, ContentType.create("application/pdf"), FILE_TO_SEND.getName());
                         builder.setBoundary("----Content Boundary----");
+                        */
 
                         httpClient = HttpClients.createDefault();
                         HttpEntity entity = builder.build();
@@ -404,7 +439,7 @@ public class SIGN_GUI extends javax.swing.JFrame {
                                 return Entity != null ? EntityUtils.toString(Entity) : null;
                             } else {
                                 Main.DJF.getDummyJFrame().dispose();
-                                throw new ClientProtocolException("Unexpected response status: " + status + response);
+                                throw new ClientProtocolException("Unexpected response status: " + status +"\n" + response+"\n");
                             }
                         };
 

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<ArrayOfScanProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ScanProfile>
+    <Device>
+      <ID>HP Scanjet 5590 Doc TWAIN</ID>
+      <Name>HP Scanjet 5590 Doc TWAIN</Name>
+    </Device>
+    <DriverName>twain</DriverName>
+    <DisplayName>HP Scanjet 5590 Doc TWAIN</DisplayName>
+    <IconID>0</IconID>
+    <MaxQuality>false</MaxQuality>
+    <IsDefault>false</IsDefault>
+    <Version>2</Version>
+    <UseNativeUI>false</UseNativeUI>
+    <AfterScanScale>OneToOne</AfterScanScale>
+    <Brightness>0</Brightness>
+    <Contrast>0</Contrast>
+    <BitDepth>C24Bit</BitDepth>
+    <PageAlign>Right</PageAlign>
+    <PageSize>A4</PageSize>
+    <Resolution>Dpi200</Resolution>
+    <PaperSource>Feeder</PaperSource>
+    <EnableAutoSave>false</EnableAutoSave>
+    <Quality>75</Quality>
+    <AutoDeskew>true</AutoDeskew>
+    <BrightnessContrastAfterScan>false</BrightnessContrastAfterScan>
+    <ForcePageSize>false</ForcePageSize>
+    <ForcePageSizeCrop>false</ForcePageSizeCrop>
+    <TwainImpl>Default</TwainImpl>
+    <ExcludeBlankPages>false</ExcludeBlankPages>
+    <BlankPageWhiteThreshold>70</BlankPageWhiteThreshold>
+    <BlankPageCoverageThreshold>25</BlankPageCoverageThreshold>
+    <WiaOffsetWidth>false</WiaOffsetWidth>
+    <WiaRetryOnFailure>false</WiaRetryOnFailure>
+    <WiaDelayBetweenScans>false</WiaDelayBetweenScans>
+    <WiaDelayBetweenScansSeconds>2</WiaDelayBetweenScansSeconds>
+    <FlipDuplexedPages>false</FlipDuplexedPages>
+  </ScanProfile>
+  <ScanProfile>
+    <Device>
+      <ID>HP Deskjet Ink Advantage 1510 TWA</ID>
+      <Name>HP Deskjet Ink Advantage 1510 TWA</Name>
+    </Device>
+    <DriverName>twain</DriverName>
+    <DisplayName>HP Deskjet Ink Advantage 1510 TWA</DisplayName>
+    <IconID>0</IconID>
+    <MaxQuality>false</MaxQuality>
+    <IsDefault>true</IsDefault>
+    <Version>2</Version>
+    <UseNativeUI>false</UseNativeUI>
+    <AfterScanScale>OneToOne</AfterScanScale>
+    <Brightness>0</Brightness>
+    <Contrast>0</Contrast>
+    <BitDepth>C24Bit</BitDepth>
+    <PageAlign>Right</PageAlign>
+    <PageSize>Letter</PageSize>
+    <Resolution>Dpi100</Resolution>
+    <PaperSource>Glass</PaperSource>
+    <EnableAutoSave>false</EnableAutoSave>
+    <Quality>75</Quality>
+    <AutoDeskew>false</AutoDeskew>
+    <BrightnessContrastAfterScan>false</BrightnessContrastAfterScan>
+    <ForcePageSize>false</ForcePageSize>
+    <ForcePageSizeCrop>false</ForcePageSizeCrop>
+    <TwainImpl>Default</TwainImpl>
+    <ExcludeBlankPages>false</ExcludeBlankPages>
+    <BlankPageWhiteThreshold>70</BlankPageWhiteThreshold>
+    <BlankPageCoverageThreshold>25</BlankPageCoverageThreshold>
+    <WiaOffsetWidth>false</WiaOffsetWidth>
+    <WiaRetryOnFailure>false</WiaRetryOnFailure>
+    <WiaDelayBetweenScans>false</WiaDelayBetweenScans>
+    <WiaDelayBetweenScansSeconds>2</WiaDelayBetweenScansSeconds>
+    <FlipDuplexedPages>false</FlipDuplexedPages>
+  </ScanProfile>
+</ArrayOfScanProfile>

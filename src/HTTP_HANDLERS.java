@@ -142,7 +142,7 @@ public class HTTP_HANDLERS {
         boolean scan_suc = true;
 
         String STR = FILE_OPERATIONS.get_FILE_DIR().replace("/", "\\");
-
+        System.out.println(FILE_OPERATIONS.get_RUNNING_PATH().replace("/", "\\"));
         
         ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", "cd \"" + FILE_OPERATIONS.get_RUNNING_PATH().replace("/", "\\") + "NAPS2\\App\" && naps2.console -o \"" + STR + "scanned\"" + "\\" + name);
         Process p = builder.start();
@@ -158,6 +158,7 @@ public class HTTP_HANDLERS {
                 JOptionPane.showMessageDialog(null, "ΤΟ ΑΡΧΕΙΟ ΥΠΑΡΧΕΙ ΗΔΗ", "ERROR", JOptionPane.ERROR_MESSAGE);
                 he.sendResponseHeaders(204, -1);
                 he.close();
+                break;
             }
             System.out.println(line);
         }
@@ -758,7 +759,7 @@ public class HTTP_HANDLERS {
             if (parameters.containsKey("v")) {
                 version = parameters.get("v").toString();
             } else {
-                version = "0";
+                version = "1";
             }
 
             Path hid_file_edit = Paths.get(STR + "checks\\" + "edit_" + parameters.get("fname").toString() + "_" + parameters.get("app_doc_uid").toString() + "_" + version + ".check");
@@ -954,7 +955,7 @@ public class HTTP_HANDLERS {
                     HttpEntity Entity = response.getEntity();
                     return Entity != null ? EntityUtils.toString(Entity) : null;
                 } else {
-                    throw new ClientProtocolException("Unexpected response status: " + status);
+                    throw new ClientProtocolException("Unexpected response status: " + status +"\n" + response + "\n");
                 }
             };
 
