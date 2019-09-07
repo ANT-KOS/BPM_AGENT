@@ -342,7 +342,6 @@ public class SIGN_GUI extends javax.swing.JFrame {
                         builder.setBoundary("----Content Boundary----");
                         builder.addTextBody("tas_uid", parameters.get("tas_uid").toString(), ContentType.TEXT_PLAIN);
                         System.out.println("tas_uid: " + parameters.get("tas_uid").toString());
-                        System.out.println("COMMENT_CONTENT: " + parameters.get("app_doc_comment"));
                         if (parameters.get("app_doc_comment") != null) {
                             if (!parameters.get("app_doc_comment").toString().equals("")) {
                                 builder.setBoundary("----Content Boundary----");
@@ -350,6 +349,7 @@ public class SIGN_GUI extends javax.swing.JFrame {
                                 System.out.println("app_doc_comment: " + parameters.get("app_doc_comment").toString());
                             }
                         }
+                        
                         builder.setBoundary("----Content Boundary----");
                         builder.addTextBody("userUid", parameters.get("userUid").toString(), ContentType.TEXT_PLAIN);
                         System.out.println("userUid: " + parameters.get("userUid").toString());
@@ -381,6 +381,7 @@ public class SIGN_GUI extends javax.swing.JFrame {
                                     .setEntity(entity)
                                     .build();
                         }
+                        System.out.println(request);
 
                         ResponseHandler<String> responseHandler = response
                                 -> {
@@ -403,7 +404,7 @@ public class SIGN_GUI extends javax.swing.JFrame {
                                 return Entity != null ? EntityUtils.toString(Entity) : null;
                             } else {
                                 Main.DJF.getDummyJFrame().dispose();
-                                throw new ClientProtocolException("Unexpected response status: " + status);
+                                throw new ClientProtocolException("Unexpected response status: " + status + response);
                             }
                         };
 
