@@ -37,11 +37,11 @@ import java.util.zip.ZipInputStream;
 public class Main {
 
     protected static int port;
-    protected static String BPM_AGENT_VERSION = "4.4";
-    protected static String BPM_AGENT_VERSION_R = "8";
+    protected static String BPM_AGENT_VERSION = "4.5";
+    protected static String BPM_AGENT_VERSION_R = "0";
     protected static String NAPS_LATEST = "6.1.2";
     protected static boolean INSTALL_NAPS = true;
-    protected static String DATE_OF_CREATION = "30/08/2019";
+    protected static String DATE_OF_CREATION = "10/09/2019";
     private static final int BUFFER_SIZE = 4096;
     private static MASS_DELETE_FILES MDF = new MASS_DELETE_FILES();
     protected static DUMMYJFRAME DJF;
