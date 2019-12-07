@@ -52,6 +52,7 @@ public class Main {
             Release current = new Release();
             current.setpkgver(BPM_AGENT_VERSION);
             current.setPkgrel(BPM_AGENT_VERSION_R);
+            FILE_OPERATIONS.set_NAPS_VERSION(NAPS_LATEST);
             //VERSION OF PROGRAM - END
             
             String updateRepositoryUrl = "https://bpm.gc.teiemt.gr/bpm_agent_update/";
@@ -137,7 +138,6 @@ public class Main {
     }
 
     public static void main(String[] args) throws IOException, InterruptedException, InstantiationException, IllegalAccessException {
-        FILE_OPERATIONS FOP = new FILE_OPERATIONS();
         DJF = new DUMMYJFRAME();
         if (FILE_OPERATIONS.get_INI_VERSION() == null || !FILE_OPERATIONS.get_INI_VERSION().equals(FILE_OPERATIONS.INI_VERSION)) {
             FILE_OPERATIONS.update_config();

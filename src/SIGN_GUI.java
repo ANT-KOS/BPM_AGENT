@@ -204,7 +204,7 @@ public class SIGN_GUI extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(SIGN_GUI_PANEL, javax.swing.GroupLayout.PREFERRED_SIZE, 296, Short.MAX_VALUE)
+            .addComponent(SIGN_GUI_PANEL, javax.swing.GroupLayout.PREFERRED_SIZE, 314, Short.MAX_VALUE)
         );
 
         pack();
