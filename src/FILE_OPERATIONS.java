@@ -190,11 +190,12 @@ public final class FILE_OPERATIONS {
     
     public static String create_PKCS11_config(String conf) throws IOException
     {
-        String path = "config/pkcs11.txt";
+        String path = "config/pkcs11.conf";
         try (BufferedWriter WRITER = new BufferedWriter(new FileWriter(path))) {
             WRITER.write(conf);
             WRITER.flush();
         }
-        return path;
+        File pkcs11_conf = new File(path);
+        return pkcs11_conf.getCanonicalPath();
     }
 }

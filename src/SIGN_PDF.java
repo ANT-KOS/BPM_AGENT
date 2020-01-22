@@ -119,28 +119,26 @@ public class SIGN_PDF {
     public int Sign_Pdf_W_USB() throws IOException, NoSuchAlgorithmException, KeyStoreException, CertificateException, UnrecoverableKeyException, Exception {
         calculate_Rect(signers);
         String tsaUrl = "http://timestamp.ermis.gov.gr/TSS/HttpTspServer";
-        String DLL = "C:/Windows/System32/eTPKCS11.dll";
+        String DLL = "C:\\Windows\\System32\\eTPKCS11.dll";
         long[] USB_SLOTS_WITH_TOKENS;
         USB_SLOTS_WITH_TOKENS = getSlotsWithTokens(DLL);
 
         if (USB_SLOTS_WITH_TOKENS.length == 0) {
             return 3;
         } else {
-            String config = "name=eToken\n"
-                    + "library=" + DLL + "\n"
+            String config = "name = eToken\n"
+                    + "library = " + DLL + "\n"
                     + "slotListIndex = " + getSlotsWithTokens(DLL)[0];
             
-            //String pkcs11_path = FILE_OPERATIONS.create_PKCS11_config(config);
+            String pkcs11_path = FILE_OPERATIONS.create_PKCS11_config(config);
             try {
-                ByteArrayInputStream BAIS = new ByteArrayInputStream(config.getBytes());
-                //PROV_PKCS11 = Security.getProvider("SunPKCS11");
-                //PROV_PKCS11.configure(pkcs11_path);
-                PROV_PKCS11 = new SunPKCS11(BAIS);
-                Security.addProvider(PROV_PKCS11);
-                BouncyCastleProvider PROV_BC = new BouncyCastleProvider();
-                Security.addProvider(PROV_BC);
+                //ByteArrayInputStream BAIS = new ByteArrayInputStream(config.getBytes());
+                //PROV_PKCS11 = new SunPKCS11(BAIS);
+                PROV_PKCS11 = Security.getProvider("SunPKCS11");
+                PROV_PKCS11 = PROV_PKCS11.configure(pkcs11_path);
+                Security.addProvider(PROV_PKCS11);            
 
-                KeyStore ks = KeyStore.getInstance("PKCS11", PROV_PKCS11);
+                KeyStore ks = KeyStore.getInstance("PKCS11",PROV_PKCS11);
                 ks.load(null, pass);
 
                 String alias = (String) ks.aliases().nextElement();
@@ -149,7 +147,7 @@ public class SIGN_PDF {
 
                 IOcspClient OCSP = new OcspClientBouncyCastle(new OCSPVerifier(null,null));
                 ITSAClient TSA = null;
-                String OCSP_URL = "";
+                //String OCSP_URL = "";
                 int last_cert = 0;
                 for (last_cert = 0; last_cert < chain.length; last_cert++) {
                     X509Certificate cert = (X509Certificate) chain[last_cert];
@@ -159,7 +157,7 @@ public class SIGN_PDF {
                     } else {
                         TSA = new TSAClientBouncyCastle(tsaUrl);                  
                     }
-                    OCSP_URL = CertificateUtil.getOCSPURL(cert);  
+                    //OCSP_URL = CertificateUtil.getOCSPURL(cert);  
                 }
                 /*
                 if(OCSP_URL != null)
