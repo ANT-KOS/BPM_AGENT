@@ -55,6 +55,7 @@ import sun.security.pkcs11.wrapper.PKCS11;
 import sun.security.pkcs11.wrapper.PKCS11Exception;
 
 
+
 public class SIGN_PDF {
 
     private static String SRC;
@@ -127,13 +128,13 @@ public class SIGN_PDF {
                     + "library=" + DLL + "\n"
                     + "slotListIndex = " + getSlotsWithTokens(DLL)[0];
             
-            String pkcs11_path = FILE_OPERATIONS.create_PKCS11_config(config);
-            
+            //String pkcs11_path = FILE_OPERATIONS.create_PKCS11_config(config);
             try {
-                ByteArrayInputStream BAIS = new ByteArrayInputStream(config.getBytes());
+                //ByteArrayInputStream BAIS = new ByteArrayInputStream(config.getBytes());
                 //PROV_PKCS11 = Security.getProvider("SunPKCS11");
                 //PROV_PKCS11.configure(pkcs11_path);
-                PROV_PKCS11 = new SunPKCS11(BAIS);
+                PROV_PKCS11 = new SunPKCS11();
+                PROV_PKCS11.configure("--"+config);
                 Security.addProvider(PROV_PKCS11);
                 BouncyCastleProvider PROV_BC = new BouncyCastleProvider();
                 Security.addProvider(PROV_BC);

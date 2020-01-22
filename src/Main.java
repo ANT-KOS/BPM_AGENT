@@ -1,5 +1,3 @@
-
-
 /*
  * Antonis Kosmidis Copyright (c) 2016.  ALL RIGHTS RESERVED
  */

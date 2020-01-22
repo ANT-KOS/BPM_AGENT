@@ -1,4 +1,3 @@
-
 import java.io.File;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -8,21 +7,18 @@ import org.jodconverter.office.LocalOfficeManager;
 import org.jodconverter.office.OfficeException;
 import org.jodconverter.office.OfficeUtils;
 
-
 public class PDF_Converter {
     public String convert(File input,File output) throws OfficeException
     {
         final LocalOfficeManager LOM = LocalOfficeManager.install();
-        try
-        {
+        try{
             LOM.start();
             JodConverter
                     .convert(input)
                     .to(output)
                     .execute();
         }
-        finally
-        {
+        finally{
             OfficeUtils.stopQuietly(LOM);
         }
         return "CONVERT_COMPLETE";
@@ -31,8 +27,7 @@ public class PDF_Converter {
     public String convert(InputStream inputS, OutputStream outputS) throws OfficeException
     {
         final LocalOfficeManager LOM = LocalOfficeManager.install();
-        try
-        {
+        try{
             LOM.start();
             JodConverter
                     .convert(inputS)
@@ -41,8 +36,7 @@ public class PDF_Converter {
                     .as(DefaultDocumentFormatRegistry.PDF)
                     .execute();
         }
-        finally
-        {
+        finally{
             OfficeUtils.stopQuietly(LOM);
         }
         return "CONVERT_COMPLETE";
