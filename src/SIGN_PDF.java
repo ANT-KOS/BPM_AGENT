@@ -16,6 +16,7 @@ import com.itextpdf.signatures.IExternalDigest;
 import com.itextpdf.signatures.IExternalSignature;
 import com.itextpdf.signatures.IOcspClient;
 import com.itextpdf.signatures.ITSAClient;
+import com.itextpdf.signatures.OCSPVerifier;
 import com.itextpdf.signatures.OcspClientBouncyCastle;
 import com.itextpdf.signatures.PdfSignatureAppearance;
 import com.itextpdf.signatures.PdfSigner;
@@ -37,6 +38,7 @@ import java.security.Provider;
 import java.security.Security;
 import java.security.UnrecoverableKeyException;
 import java.security.cert.CertificateException;
+import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -130,11 +132,10 @@ public class SIGN_PDF {
             
             //String pkcs11_path = FILE_OPERATIONS.create_PKCS11_config(config);
             try {
-                //ByteArrayInputStream BAIS = new ByteArrayInputStream(config.getBytes());
+                ByteArrayInputStream BAIS = new ByteArrayInputStream(config.getBytes());
                 //PROV_PKCS11 = Security.getProvider("SunPKCS11");
                 //PROV_PKCS11.configure(pkcs11_path);
-                PROV_PKCS11 = new SunPKCS11();
-                PROV_PKCS11.configure("--"+config);
+                PROV_PKCS11 = new SunPKCS11(BAIS);
                 Security.addProvider(PROV_PKCS11);
                 BouncyCastleProvider PROV_BC = new BouncyCastleProvider();
                 Security.addProvider(PROV_BC);
@@ -146,20 +147,29 @@ public class SIGN_PDF {
                 PrivateKey pk = (PrivateKey) ks.getKey(alias, pass);
                 Certificate[] chain = ks.getCertificateChain(alias);
 
-                IOcspClient OCSP = new OcspClientBouncyCastle(null);
+                IOcspClient OCSP = new OcspClientBouncyCastle(new OCSPVerifier(null,null));
                 ITSAClient TSA = null;
-
-                for (int i = 0; i < chain.length; i++) {
-                    X509Certificate cert = (X509Certificate) chain[i];
+                String OCSP_URL = "";
+                int last_cert = 0;
+                for (last_cert = 0; last_cert < chain.length; last_cert++) {
+                    X509Certificate cert = (X509Certificate) chain[last_cert];
                     String TSA_URL = CertificateUtil.getTSAURL(cert);
                     if (TSA_URL != null) {
-                        TSA = new TSAClientBouncyCastle(TSA_URL);
-                        break;
+                        TSA = new TSAClientBouncyCastle(TSA_URL);                     
                     } else {
-                        TSA = new TSAClientBouncyCastle(tsaUrl);
-                        break;
+                        TSA = new TSAClientBouncyCastle(tsaUrl);                  
                     }
+                    OCSP_URL = CertificateUtil.getOCSPURL(cert);  
                 }
+                /*
+                if(OCSP_URL != null)
+                {
+                    OCSP = new OcspClientBouncyCastle(new OCSPVerifier(null,null));
+                }   
+                */
+                
+                
+                
                 List<ICrlClient> crlList = new ArrayList<>();
                 crlList.add(new CrlClientOnline(chain));
 

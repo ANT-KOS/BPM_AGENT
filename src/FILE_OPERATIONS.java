@@ -16,7 +16,7 @@ public final class FILE_OPERATIONS {
     private static String S, S_2;
     protected static String INI_VERSION = "V3";
 
-    public FILE_OPERATIONS() {
+    protected static void FILE_OPERATIONS_INIT() {
         try {
             S = new File(".").getCanonicalPath();
             S_2 = S;

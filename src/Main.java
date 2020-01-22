@@ -137,6 +137,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException, InterruptedException, InstantiationException, IllegalAccessException {
         DJF = new DUMMYJFRAME();
+        FILE_OPERATIONS.FILE_OPERATIONS_INIT();
         if (FILE_OPERATIONS.get_INI_VERSION() == null || !FILE_OPERATIONS.get_INI_VERSION().equals(FILE_OPERATIONS.INI_VERSION)) {
             FILE_OPERATIONS.update_config();
         }
