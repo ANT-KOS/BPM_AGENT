@@ -1,0 +1,387 @@
+files
+30
+Directory Exists
+System.currentTimeMillis 1472125051220
+purgeTime 1469533051220
+files\scanned
+30
+Directory Exists
+System.currentTimeMillis 1472125051221
+purgeTime 1469533051221
+аУЦ 25, 2016 2:37:31 лл HTTP_SERVER Start
+SEVERE: null
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at sun.net.httpserver.ServerImpl.<init>(Unknown Source)
+	at sun.net.httpserver.HttpServerImpl.<init>(Unknown Source)
+	at sun.net.httpserver.DefaultHttpServerProvider.createHttpServer(Unknown Source)
+	at com.sun.net.httpserver.HttpServer.create(Unknown Source)
+	at HTTP_SERVER.Start(HTTP_SERVER.java:19)
+	at main.main(main.java:20)
+
+files
+30
+Directory Exists
+System.currentTimeMillis 1472125051963
+purgeTime 1469533051963
+files\scanned
+30
+Directory Exists
+System.currentTimeMillis 1472125051963
+purgeTime 1469533051963
+аУЦ 25, 2016 2:37:31 лл HTTP_SERVER Start
+SEVERE: null
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at sun.net.httpserver.ServerImpl.<init>(Unknown Source)
+	at sun.net.httpserver.HttpServerImpl.<init>(Unknown Source)
+	at sun.net.httpserver.DefaultHttpServerProvider.createHttpServer(Unknown Source)
+	at com.sun.net.httpserver.HttpServer.create(Unknown Source)
+	at HTTP_SERVER.Start(HTTP_SERVER.java:19)
+	at main.main(main.java:20)
+
+files
+30
+Directory Exists
+System.currentTimeMillis 1472125054120
+purgeTime 1469533054120
+files\scanned
+30
+Directory Exists
+System.currentTimeMillis 1472125054121
+purgeTime 1469533054121
+аУЦ 25, 2016 2:37:34 лл HTTP_SERVER Start
+SEVERE: null
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at sun.net.httpserver.ServerImpl.<init>(Unknown Source)
+	at sun.net.httpserver.HttpServerImpl.<init>(Unknown Source)
+	at sun.net.httpserver.DefaultHttpServerProvider.createHttpServer(Unknown Source)
+	at com.sun.net.httpserver.HttpServer.create(Unknown Source)
+	at HTTP_SERVER.Start(HTTP_SERVER.java:19)
+	at main.main(main.java:20)
+
+files
+30
+Directory Exists
+System.currentTimeMillis 1472125058243
+purgeTime 1469533058243
+files\scanned
+30
+Directory Exists
+System.currentTimeMillis 1472125058244
+purgeTime 1469533058244
+аУЦ 25, 2016 2:37:38 лл HTTP_SERVER Start
+SEVERE: null
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at sun.net.httpserver.ServerImpl.<init>(Unknown Source)
+	at sun.net.httpserver.HttpServerImpl.<init>(Unknown Source)
+	at sun.net.httpserver.DefaultHttpServerProvider.createHttpServer(Unknown Source)
+	at com.sun.net.httpserver.HttpServer.create(Unknown Source)
+	at HTTP_SERVER.Start(HTTP_SERVER.java:19)
+	at main.main(main.java:20)
+
+files
+30
+Directory Exists
+System.currentTimeMillis 1472125066367
+purgeTime 1469533066366
+files\scanned
+30
+Directory Exists
+System.currentTimeMillis 1472125066367
+purgeTime 1469533066367
+аУЦ 25, 2016 2:37:46 лл HTTP_SERVER Start
+SEVERE: null
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at sun.net.httpserver.ServerImpl.<init>(Unknown Source)
+	at sun.net.httpserver.HttpServerImpl.<init>(Unknown Source)
+	at sun.net.httpserver.DefaultHttpServerProvider.createHttpServer(Unknown Source)
+	at com.sun.net.httpserver.HttpServer.create(Unknown Source)
+	at HTTP_SERVER.Start(HTTP_SERVER.java:19)
+	at main.main(main.java:20)
+
+files
+30
+Directory Exists
+System.currentTimeMillis 1472125082489
+purgeTime 1469533082489
+files\scanned
+30
+Directory Exists
+System.currentTimeMillis 1472125082490
+purgeTime 1469533082490
+аУЦ 25, 2016 2:38:02 лл HTTP_SERVER Start
+SEVERE: null
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at sun.net.httpserver.ServerImpl.<init>(Unknown Source)
+	at sun.net.httpserver.HttpServerImpl.<init>(Unknown Source)
+	at sun.net.httpserver.DefaultHttpServerProvider.createHttpServer(Unknown Source)
+	at com.sun.net.httpserver.HttpServer.create(Unknown Source)
+	at HTTP_SERVER.Start(HTTP_SERVER.java:19)
+	at main.main(main.java:20)
+
+files
+30
+Directory Exists
+System.currentTimeMillis 1472125114767
+purgeTime 1469533114767
+files\scanned
+30
+Directory Exists
+System.currentTimeMillis 1472125114768
+purgeTime 1469533114768
+аУЦ 25, 2016 2:38:34 лл HTTP_SERVER Start
+SEVERE: null
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at sun.net.httpserver.ServerImpl.<init>(Unknown Source)
+	at sun.net.httpserver.HttpServerImpl.<init>(Unknown Source)
+	at sun.net.httpserver.DefaultHttpServerProvider.createHttpServer(Unknown Source)
+	at com.sun.net.httpserver.HttpServer.create(Unknown Source)
+	at HTTP_SERVER.Start(HTTP_SERVER.java:19)
+	at main.main(main.java:20)
+
+files
+30
+Directory Exists
+System.currentTimeMillis 1472125179064
+purgeTime 1469533179064
+files\scanned
+30
+Directory Exists
+System.currentTimeMillis 1472125179064
+purgeTime 1469533179064
+аУЦ 25, 2016 2:39:39 лл HTTP_SERVER Start
+SEVERE: null
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at sun.net.httpserver.ServerImpl.<init>(Unknown Source)
+	at sun.net.httpserver.HttpServerImpl.<init>(Unknown Source)
+	at sun.net.httpserver.DefaultHttpServerProvider.createHttpServer(Unknown Source)
+	at com.sun.net.httpserver.HttpServer.create(Unknown Source)
+	at HTTP_SERVER.Start(HTTP_SERVER.java:19)
+	at main.main(main.java:20)
+
+files
+30
+Directory Exists
+System.currentTimeMillis 1472125307301
+purgeTime 1469533307301
+files\scanned
+30
+Directory Exists
+System.currentTimeMillis 1472125307302
+purgeTime 1469533307302
+аУЦ 25, 2016 2:41:47 лл HTTP_SERVER Start
+SEVERE: null
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at sun.net.httpserver.ServerImpl.<init>(Unknown Source)
+	at sun.net.httpserver.HttpServerImpl.<init>(Unknown Source)
+	at sun.net.httpserver.DefaultHttpServerProvider.createHttpServer(Unknown Source)
+	at com.sun.net.httpserver.HttpServer.create(Unknown Source)
+	at HTTP_SERVER.Start(HTTP_SERVER.java:19)
+	at main.main(main.java:20)
+
+files
+30
+Directory Exists
+System.currentTimeMillis 1472125563455
+purgeTime 1469533563455
+files\scanned
+30
+Directory Exists
+System.currentTimeMillis 1472125563455
+purgeTime 1469533563455
+аУЦ 25, 2016 2:46:03 лл HTTP_SERVER Start
+SEVERE: null
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at sun.net.httpserver.ServerImpl.<init>(Unknown Source)
+	at sun.net.httpserver.HttpServerImpl.<init>(Unknown Source)
+	at sun.net.httpserver.DefaultHttpServerProvider.createHttpServer(Unknown Source)
+	at com.sun.net.httpserver.HttpServer.create(Unknown Source)
+	at HTTP_SERVER.Start(HTTP_SERVER.java:19)
+	at main.main(main.java:20)
+
+files
+30
+Directory Exists
+System.currentTimeMillis 1472125819615
+purgeTime 1469533819615
+files\scanned
+30
+Directory Exists
+System.currentTimeMillis 1472125819615
+purgeTime 1469533819615
+аУЦ 25, 2016 2:50:19 лл HTTP_SERVER Start
+SEVERE: null
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at sun.net.httpserver.ServerImpl.<init>(Unknown Source)
+	at sun.net.httpserver.HttpServerImpl.<init>(Unknown Source)
+	at sun.net.httpserver.DefaultHttpServerProvider.createHttpServer(Unknown Source)
+	at com.sun.net.httpserver.HttpServer.create(Unknown Source)
+	at HTTP_SERVER.Start(HTTP_SERVER.java:19)
+	at main.main(main.java:20)
+
+files
+30
+Directory Exists
+System.currentTimeMillis 1472207545213
+purgeTime 1469615545213
+files\scanned
+30
+Directory Exists
+System.currentTimeMillis 1472207545213
+purgeTime 1469615545213
+Server started at port: 34300
+
+Watch Service registered for dir: files
+files
+30
+Directory Exists
+files\дглос хеялгс.pdf
+System.currentTimeMillis 1472207887825
+purgeTime 1469615887825
+Length : 1
+listFile.getName() : дглос хеялгс.pdf
+listFile.lastModified() :1472207841389
+files\scanned
+30
+Directory Exists
+System.currentTimeMillis 1472207887826
+purgeTime 1469615887826
+Length : 1
+listFile.getName() : дглос хеялгс.pdf
+listFile.lastModified() :1472207841389
+Server started at port: 34300
+
+Watch Service registered for dir: files
+files
+30
+Directory Exists
+files\дглос хеялгс.pdf
+System.currentTimeMillis 1472207907271
+purgeTime 1469615907271
+Length : 1
+listFile.getName() : дглос хеялгс.pdf
+listFile.lastModified() :1472207888462
+files\scanned
+30
+Directory Exists
+System.currentTimeMillis 1472207907272
+purgeTime 1469615907272
+Length : 1
+listFile.getName() : дглос хеялгс.pdf
+listFile.lastModified() :1472207888462
+Server started at port: 34300
+
+files
+30
+Directory Exists
+files\дглос хеялгс.pdf
+System.currentTimeMillis 1472207954501
+purgeTime 1469615954501
+Length : 1
+listFile.getName() : дглос хеялгс.pdf
+listFile.lastModified() :1472207888462
+files\scanned
+30
+Directory Exists
+System.currentTimeMillis 1472207954501
+purgeTime 1469615954501
+Length : 1
+listFile.getName() : дглос хеялгс.pdf
+listFile.lastModified() :1472207888462
+Server started at port: 34300
+
+Watch Service registered for dir: files
+files
+30
+Directory Exists
+files\дглос хеялгс.pdf
+System.currentTimeMillis 1472208025139
+purgeTime 1469616025139
+Length : 1
+listFile.getName() : дглос хеялгс.pdf
+listFile.lastModified() :1472207960980
+files\scanned
+30
+Directory Exists
+System.currentTimeMillis 1472208025140
+purgeTime 1469616025140
+Length : 1
+listFile.getName() : дглос хеялгс.pdf
+listFile.lastModified() :1472207960980
+Server started at port: 34300
+
+Watch Service registered for dir: files
+files
+30
+Directory Exists
+files\дглос хеялгс.pdf
+System.currentTimeMillis 1472215355735
+purgeTime 1469623355735
+Length : 1
+listFile.getName() : дглос хеялгс.pdf
+listFile.lastModified() :1472208057167
+files\scanned
+30
+Directory Exists
+System.currentTimeMillis 1472215355736
+purgeTime 1469623355736
+Length : 1
+listFile.getName() : дглос хеялгс.pdf
+listFile.lastModified() :1472208057167
+Server started at port: 34300
+
+Watch Service registered for dir: files
